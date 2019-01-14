@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".OsmMapsActivity">
+
+
+    <org.osmdroid.views.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    <CheckBox
+            android:id="@+id/checkboxLocation"
+            android:button="@drawable/check_list"
+            android:layout_gravity="bottom|start"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <ImageView
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="24dp"
+            android:id="@+id/btnComplete"
+            android:src="@drawable/ic_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+
+        <EditText
+                android:id="@+id/etLat"
+                android:maxLength="9"
+                android:hint="@string/latitude"
+                android:textColorHint="@color/colorPrimary"
+                android:layout_width="100dp"
+                android:inputType="numberSigned"
+                android:layout_height="match_parent"/>
+
+        <EditText
+                android:id="@+id/etLon"
+                android:maxLength="9"
+                android:textColorHint="@color/colorPrimary"
+                android:layout_width="100dp"
+                android:hint="@string/longitude"
+                android:inputType="numberSigned"
+                android:layout_height="match_parent"/>
+
+        <EditText
+                android:id="@+id/etAzimut"
+                android:maxLength="3"
+                android:inputType="numberDecimal"
+                android:textColorHint="@color/colorPrimary"
+                android:hint="@string/azimut"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"/>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+</FrameLayout>
